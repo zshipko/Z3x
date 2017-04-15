@@ -1,0 +1,7 @@
+description = "Simple Z3 Bindings"
+version = "%%VERSION_NUM%%"
+requires = "Z3 sexplib"
+archive(byte) = "Z3x.cma"
+archive(native) = "Z3x.cmxa"
+plugin(byte) = "Z3x.cma"
+plugin(native) = "Z3x.cmxs"

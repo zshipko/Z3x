@@ -1,0 +1,22 @@
+opam-version: "1.2"
+maintainer: "Zach Shipko <zachshipko@gmail.com>"
+authors: ["Zach Shipko <zachshipko@gmail.com>"]
+homepage: "https://github.com/zshipko/Z3x"
+doc: "https://zshipko.github.io/Z3x/doc"
+license: "ISC"
+dev-repo: "https://github.com/zshipko/Z3x.git"
+bug-reports: "https://github.com/zshipko/Z3x/issues"
+tags: []
+available: [ ocaml-version >= "4.01.0"]
+depends:
+[
+  "ocamlfind" {build}
+  "ocamlbuild" {build}
+  "topkg" {build & >= "0.9.0"}
+  "Z3"
+  "sexplib"
+]
+depopts: []
+build: [[
+    "ocaml" "./pkg/pkg.ml" "build" "--pinned" "%{pinned}%"
+]]
