@@ -1276,4 +1276,7 @@ module Infix :
     val solve :
       ?solver:Z3.Solver.solver ->
       expr_t list -> Z3.Solver.status * Z3.Solver.solver
+
+    val get_model : Z3.Solver.solver -> Z3.Model.model option
+    val eval : Z3.Model.model -> expr_t -> Z3.Expr.expr option
   end
